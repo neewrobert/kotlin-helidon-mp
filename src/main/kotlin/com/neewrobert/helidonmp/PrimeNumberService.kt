@@ -30,4 +30,21 @@ open class PrimeNumberService {
         return primeNumbers
     }
 
+    open fun verifyIfItsPrimeNumber(number: Int): Boolean {
+
+        if (number <= 1) {
+            return false
+        }
+        var currentNumber = 2
+        while (currentNumber * currentNumber <= number) {
+            if (number % currentNumber == 0) {
+                return false
+            }
+            currentNumber++
+        }
+
+        return true
+
+    }
+
 }
