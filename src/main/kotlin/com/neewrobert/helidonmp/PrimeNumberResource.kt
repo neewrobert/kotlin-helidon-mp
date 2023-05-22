@@ -29,6 +29,6 @@ open class PrimeNumberResource
     @Produces(MediaType.APPLICATION_JSON)
     @Timed
     open fun verifyIfItsPrimeNumber(@PathParam("number") number: Int): Boolean {
-        return primeNumberService.verifyIfItsPrimeNumber(number)
+        return primeNumberService.isPrimeNumber(number)
     }
 }

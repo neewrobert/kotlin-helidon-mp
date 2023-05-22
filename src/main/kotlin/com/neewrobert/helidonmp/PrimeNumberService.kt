@@ -30,7 +30,7 @@ open class PrimeNumberService {
         return primeNumbers
     }
 
-    open fun verifyIfItsPrimeNumber(number: Int): Boolean {
+    open fun isPrimeNumber(number: Int): Boolean {
 
         if (number <= 1) {
             return false
@@ -42,9 +42,7 @@ open class PrimeNumberService {
             }
             currentNumber++
         }
-
         return true
-
     }
 
 }

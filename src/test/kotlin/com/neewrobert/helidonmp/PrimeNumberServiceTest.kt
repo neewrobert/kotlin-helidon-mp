@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 
-
 class PrimeNumberServiceTest {
 
     @Test
@@ -25,15 +24,15 @@ class PrimeNumberServiceTest {
     @ValueSource(ints = [2, 3, 5, 7, 11])
     fun `should return true for prime numbers`(number: Int) {
         val primeNumberService = PrimeNumberService()
-        val isPrime = primeNumberService.verifyIfItsPrimeNumber(number)
+        val isPrime = primeNumberService.isPrimeNumber(number)
         assert(isPrime)
     }
 
     @ParameterizedTest
-    @ValueSource(ints = [4, 6, 8, 9, 10])
+    @ValueSource(ints = [1, 4, 6, 8, 9, 10])
     fun `should return false for non prime numbers`(number: Int) {
         val primeNumberService = PrimeNumberService()
-        val isPrime = primeNumberService.verifyIfItsPrimeNumber(number)
+        val isPrime = primeNumberService.isPrimeNumber(number)
         assert(!isPrime)
     }
 
